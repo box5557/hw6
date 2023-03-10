@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Number Table</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        border: 4px double black;
+      }
+      td {
+        border: 2px double black;
+        width: 25px;
+        height: 20px;
+        text-align: center;
+      }
+      .lightblue {
+        background-color: lightblue;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Number Table</h2>
+    <table>
+      <tbody id="output"></tbody>
+    </table>
+    <script>
+      let table = "";
+      for (let i = 1; i <= 12; i++) {
+        if (i % 4 === 0) {
+          table += `<tr><td class="lightblue">${i}</td></tr>`;
+        } else {
+          table += `<tr><td>${i}</td></tr>`;
+        }
+      }
+      document.getElementById("output").innerHTML = table;
+    </script>
+  </body>
+</html>
